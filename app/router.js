@@ -10,10 +10,14 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('teachers', function() {
-    this.route('show');
+    this.route('posts', { path: '/posts/:post_id' });
   });
-  this.route('parents');
-  this.route('students');
+  this.route('parents', function() {
+    this.route('posts', { path: '/posts/:post_id' });
+  });
+  this.route('students', function() {
+    this.route('posts', { path: '/posts/:post_id' });
+  });
 });
 
 export default Router;
