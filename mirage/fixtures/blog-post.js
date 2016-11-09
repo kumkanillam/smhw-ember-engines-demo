@@ -1,5 +1,3 @@
-import faker from 'faker';
-
 export default [
   {
     id: 1,
