@@ -1,1 +1,8 @@
-@import 'bootstrap-blog'
+@import 'bootstrap-blog';
+@import 'ember-power-select';
+@import 'ember-power-calendar';
+@import 'index';
+
+.demo-calendar-big {
+  @include ember-power-calendar($cell-size: 70px);
+}

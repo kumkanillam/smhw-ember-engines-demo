@@ -11,3 +11,36 @@
     </div>
   </div>
 </header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <form class="slect-blogs-form" onsubmit={{action 'selectBlog'}}>
+        {{#power-select
+          selected=blogType
+          options=blogTypes
+          onchange=(action 'selectBlogType')
+          placeholder='Select a blog type'
+          as |blogType|}}
+            {{blogType}}
+        {{/power-select}}
+        {{#power-calendar class="demo-calendar-big"
+          center=month
+          selected=date
+          onSelect=(action 'selectDate' value='moment')
+          onCenterChange=(action (mut month) value='date') as |calendar|}}
+          <nav class="ember-power-calendar-nav">
+            <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter -12 'month'}}>«</button>
+            <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter -1 'month'}}>‹</button>
+            <div class="ember-power-calendar-nav-title">
+              {{moment-format calendar.center 'MMMM YYYY'}}
+            </div>
+            <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter 1 'month'}}>›</button>
+            <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter 12 'month'}}>»</button>
+          </nav>
+          {{calendar.days}}
+        {{/power-calendar}}
+        <button class="btn">Find blogs</button>
+      </form>
+    </div>
+  </div>
+</div>

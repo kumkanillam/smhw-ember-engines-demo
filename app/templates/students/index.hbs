@@ -1,6 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{#power-select
+        selected=destination
+        options=cities
+        onchange=(action "chooseDestination")
+        allowClear=true
+        as |name|}}
+          {{name}}
+      {{/power-select}}
       {{#each model as |post|}}
         {{blog-posts-list post=post}}
       {{/each}}
