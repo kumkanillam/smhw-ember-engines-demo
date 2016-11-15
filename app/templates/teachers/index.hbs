@@ -4,15 +4,22 @@
       {{#power-select
         selected=destination
         options=cities
-        onchange=(action 'chooseDestination')
+        onchange=(action (mut destination))
         allowClear=true
         placeholder='Select a location...'
         as |name|}}
           {{name}}
       {{/power-select}}
-      {{#each model as |post|}}
-        {{blog-posts-list post=post}}
-      {{/each}}
+      <div class="boxes-list boxes-list-vertical">
+        {{#each model as |teacher|}}
+          <div class="boxes-list-item green-box">
+            <header><strong>{{teacher.name}}</strong></header>
+            {{#link-to 'teachers.teacher' teacher}}
+              See classes
+            {{/link-to}}
+          </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>
