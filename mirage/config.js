@@ -1,8 +1,14 @@
 export default function() {
-  this.get('/blog-posts', function(schema, req) {
-    return schema.blogPosts.where(req.queryParams);
-  });
-  this.get('/blog-posts/:id');
-  this.get('/authors');
-  this.get('/authors/:id');
+  this.get('/teachers');
+  this.get('/teachers/:id');
+  this.get('/parents');
+  this.get('/parents/:id');
+  this.get('/students');
+  this.get('/students/:id');
+  this.get('/class-groups');
+  this.get('/class-groups/:id');
+  this.get('/meetings');
+  this.get('/meetings/:id');
+  this.get('/homeworks');
+  this.get('/homeworks/:id');
 }

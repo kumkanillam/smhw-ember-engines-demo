@@ -4,9 +4,9 @@
 // Global Components
 
 body {
-	@include serif-font;
 	font-size: 20px;
 	color: $gray-dark;
+	font-family: 'Open sans', sans-serif;
 }
 
 // Typography
@@ -94,7 +94,7 @@ hr.small {
 			padding: 20px;
 			&:hover,
 			&:focus {
-				color: fade(white, 80%);
+				color: #ddd;
 			}
 		}
 		.nav {
@@ -104,7 +104,7 @@ hr.small {
 					padding: 20px;
 					&:hover,
 					&:focus {
-						color: fade(white, 80%);
+						color: #ddd;
 					}
 				}
 			}

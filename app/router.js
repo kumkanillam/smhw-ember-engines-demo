@@ -7,15 +7,17 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('posts', { path: '/posts/:post_id' });
+  // this.route('posts', { path: '/posts/:post_id' });
   this.route('teachers', function() {
-    this.route('posts', { path: '/posts/:post_id' });
+    this.route('teacher', { path: '/:teacher_id' }, function() {
+      this.route('class', { path: '/class/:class_group_id' });
+    });
   });
   this.route('parents', function() {
-    this.route('posts', { path: '/posts/:post_id' });
+    this.route('parent', { path: '/:parent_id' });
   });
   this.route('students', function() {
-    this.route('posts', { path: '/posts/:post_id' });
+    this.route('student', { path: '/:student_id' });
   });
 });
 
