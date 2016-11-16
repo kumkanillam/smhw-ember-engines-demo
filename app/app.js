@@ -26,6 +26,17 @@ App = Ember.Application.extend({
           'store'
         ]
       }
+    },
+    parentsEngine: {
+      dependencies: {
+        services: [
+          'store'
+        ],
+        externalRoutes: {
+          'teacher-details': 'teachers.teacher',
+          'teacher-details.class': 'teachers.teacher.class'
+        }
+      }
     }
   }
 });
