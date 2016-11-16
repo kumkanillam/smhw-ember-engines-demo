@@ -19,6 +19,13 @@ App = Ember.Application.extend({
           'store'
         ]
       }
+    },
+    studentsEngine: {
+      dependencies: {
+        services: [
+          'store'
+        ]
+      }
     }
   }
 });

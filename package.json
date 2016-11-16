@@ -51,6 +51,7 @@
   },
   "ember-addon": {
     "paths": [
+      "lib/students-engine",
       "lib/teachers-engine"
     ]
   }

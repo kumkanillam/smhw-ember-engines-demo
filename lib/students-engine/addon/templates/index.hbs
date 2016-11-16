@@ -14,7 +14,7 @@
         {{#each model as |student|}}
           <div class="boxes-list-item blue-box">
             <header><strong>{{student.name}}</strong></header>
-            {{#link-to 'students.student' student}}
+            {{#link-to 'student' student}}
               See homeworks
             {{/link-to}}
           </div>
